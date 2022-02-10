@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:trko/res/constants.dart';
 import 'package:trko/res/size_config.dart';
+import 'package:trko/views/register.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -83,20 +85,52 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: getPropScreenHeight(38),
             ),
-            Container(
-              height: getPropScreenHeight(60),
-              width: getPropScreenWidth(337),
-              decoration: const BoxDecoration(
-                color: mainblue,
-              ),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    color: white,
-                    fontSize: getPropScreenWidth(20),
+            GestureDetector(
+              onTap: () {
+                // Navigator.push(
+                //   context,
+                //   PageTransition(
+                //     child: const SignUp(),
+                //     type: PageTransitionType.fade,
+                //   ),
+                // );
+              },
+              child: Container(
+                height: getPropScreenHeight(60),
+                width: getPropScreenWidth(337),
+                decoration: const BoxDecoration(
+                  color: mainblue,
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                      color: white,
+                      fontSize: getPropScreenWidth(20),
+                    ),
                   ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: getPropScreenHeight(87),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const Register(),
+                    type: PageTransitionType.fade,
+                  ),
+                );
+              },
+              child: Text(
+                'Register',
+                style: TextStyle(
+                  fontSize: getPropScreenWidth(20),
+                  color: textcolour,
                 ),
               ),
             ),
