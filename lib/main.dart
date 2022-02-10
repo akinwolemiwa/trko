@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trko/res/constants.dart';
+import 'package:trko/res/size_config.dart';
 import 'package:trko/views/loginscreen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      showSemanticsDebugger: false,
+      debugShowCheckedModeBanner: false,
       title: 'TRKO',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -47,13 +48,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
+    // ignore: unnecessary_statements
+    SizeConfig.mediaQueryData;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(
           'assets/images/o.png',
-          height: 377,
-          width: 377,
+          height: getPropScreenHeight(377),
+          width: getPropScreenWidth(377),
           fit: BoxFit.contain,
         ),
       ),
