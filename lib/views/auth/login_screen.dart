@@ -4,7 +4,8 @@ import 'package:page_transition/page_transition.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:trko/res/constants.dart';
 import 'package:trko/res/size_config.dart';
-import 'package:trko/views/register.dart';
+import 'package:trko/views/auth/register.dart';
+import 'package:trko/views/home/nav_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -87,13 +88,13 @@ class LoginScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   PageTransition(
-                //     child: const SignUp(),
-                //     type: PageTransitionType.fade,
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const NavScreen(),
+                    type: PageTransitionType.fade,
+                  ),
+                );
               },
               child: Container(
                 height: getPropScreenHeight(60),

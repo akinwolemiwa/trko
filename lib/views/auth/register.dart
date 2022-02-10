@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:trko/res/constants.dart';
 import 'package:trko/res/size_config.dart';
-import 'package:trko/views/loginscreen.dart';
+import 'package:trko/views/auth/login_screen.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);
