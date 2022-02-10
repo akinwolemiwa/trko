@@ -14,7 +14,7 @@ class Contacts extends StatelessWidget {
         title: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Text(
-            'Payments',
+            'Contacts',
             style: TextStyle(fontSize: getPropScreenWidth(20), color: white),
           ),
         ),
